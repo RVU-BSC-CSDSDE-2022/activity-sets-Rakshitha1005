@@ -1,33 +1,30 @@
-# include<stdio.h>
+#include <stdio.h>
 #include<math.h>
-
 float input();
 float square_root(float n);
 void output(float n, float sqrroot);
- 
+
 float input()
 {
   float n;
-  printf("enter the number:/n");
+  printf("Enter the number ");
   scanf("%e",&n);
   return n;
 }
 float square_root(float n)
 {
-  float sqrt;
-  {
-    sqrrot=sqrt(n);
-  }
-  return sqrrot;
+  
+  double sqrroot=sqrt(n);
+  return sqrroot;
 }
-void output(float n,float sqrroot)
+void output(float n ,float sqrroot)
 {
-  printf("the square root of %f is %f",n,sqrrot);
+  printf("Square root of %.2f is %.2f", n , sqrroot);
 }
 int main()
 {
- float n,sqrrot;
+  double n ,sqrroot;
   n=input();
-  sqrrot=square_root(n);
-  output(n,sqrrot);
-}
+  sqrroot=square_root(n);
+  output(n, sqrroot);
+}  
