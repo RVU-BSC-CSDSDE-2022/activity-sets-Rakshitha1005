@@ -10,46 +10,34 @@ int main()
   b=input_side();
   c=input_side();
   isscalene=check_scalene(a,b,c);
-   output( a,b,c, isscalene);
-}
+  output(a,b,c,isscalene);
+  }
 int input_side()
 {
-  int a,b,c;
-  printf("Enter the values:\n");
-  scanf("%d%d%d",&a,&b,&c);
-}
-int check_scalene(int a,int b,int c)
+  int n;
+  printf("enter the values:\n");
+  scanf("%d",&n);
+  return n;
+  }
+int check_scalene(int a,int b,int c);
 {
-  int isscalene=0,result=0;
-  if((a!=b) || (b!=c))
+  if(a!=b && b!=c && c!=a)
   {
-    result=isscalene;
-    return 0;
-    }
-    else if((a==b) || (b==c))
-    {
-      result=equilateral;
-      return 1;
-     }
+    return 1;
+  }
   else
-    {
-      result=scalene;
-      return 2;
-    }
-  return 0;
-  }
-void output(int a, int b, int c, int isscalene);
-
- if(return==0)
- {
-    printf(" The triangle with the sides is %d",isscalene);
-   }
-  else if(return ==1)
   {
-     printf("The triangle are equilateral %d",result);
+    return 0;
   }
-  else (return == 2)
+  }
+  void output(int a,int b,int c, int isscalene)  
+  {
+    if (isscalene==1)
     {
-   printf("The triangle are scalene %d",result);
-    }
-
+      printf("The triangle with sides %d ,%d and %d is  scalene",a,b,c,isscalene);
+      }
+    else
+    {
+      printf("The triangle with sides %d ,%d and %d is not scalene",a,b,c,isscalene);
+  }
+}
