@@ -1,8 +1,7 @@
 #include<stdio.h>
 int main()
 {
-  char name[10] = "Rakshitha";
-
-  printf("%s", name);
+  char name[100]="Rakshitha";
+  printf("%s",name);
   return 0;
 }
