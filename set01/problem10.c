@@ -35,9 +35,9 @@ int stringcompare(char *string1, char *string2)
     if(string1[i]!='\0'&& string2[i]!='\0')
       return 0;
     if(string1[i]!='\0')
-      return 1;
-    if(string2[i]!='\0')
       return 2;
+    if(string2[i]!='\0')
+      return 1;
   }
   if(flag==1)
   {
